@@ -1,0 +1,97 @@
+{
+    "title": "VB Pools",
+    "intro": "This app lets you easily view Virginia Beach Recreation Center pool schedules so you can easily find which pool has the amenity available when you want it.\n\nFor more information regarding schedules visit: \n[https://www.vbgov.com/government/departments/parks-recreation/programs/swimming/Pages/default.aspx](https://www.vbgov.com/government/departments/parks-recreation/programs/swimming/Pages/default.aspx)\n\nFor more information about the creator of this app visit: [https://iambrian.com](https://iambrian.com)\n\n\n*This app is not associated with [Virginia Beach Parks & Recreation](https://www.vbgov.com/government/departments/parks-recreation/Pages/default.aspx).*",
+    "events": [
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Bayside"
+        },
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Kempsville"
+        },
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Great Neck"
+        },
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Princess Anne"
+        },
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Seatack"
+        },
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Williams Farm"
+        },
+        {
+            "start": 1800,
+            "end": 2000,
+            "items": ["Lessons"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 830,
+            "end": 940,
+            "items": ["Laps", "Exercise", "Open"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 945,
+            "end": 1030,
+            "items": ["Lessons", "Exercise - Deep"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1030,
+            "end": 1130,
+            "items": ["Lessons"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1130,
+            "end": 1300,
+            "items": ["Lessons", "Exercise", "Laps (12:15-1:00p)"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1300,
+            "end": 1755,
+            "items": ["Laps", "Open + Slide"],
+            "day": 1,
+            "category": "Bow Creek"
+        }
+    ]
+}
