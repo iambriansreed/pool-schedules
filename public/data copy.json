@@ -1,0 +1,62 @@
+{
+    "categories": [
+        "Bow Creek",
+        "Bayside",
+        "Kempsville",
+        "Great Neck",
+        "Princess Anne",
+        "Seatack",
+        "Williams Farm"
+    ],
+    "events": [
+        {
+            "start": 600,
+            "end": 830,
+            "items": ["Laps", "Exercise"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 830,
+            "end": 940,
+            "items": ["Laps", "Exercise", "Open"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 945,
+            "end": 1030,
+            "items": ["Lessons", "Exercise - Deep"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1030,
+            "end": 1130,
+            "items": ["Lessons"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1130,
+            "end": 1300,
+            "items": ["Lessons", "Exercise", "Laps (12:15-1:00p)"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1300,
+            "end": 1755,
+            "items": ["Laps", "Open + Slide"],
+            "day": 1,
+            "category": "Bow Creek"
+        },
+        {
+            "start": 1800,
+            "end": 2000,
+            "items": ["Lessons"],
+            "day": 1,
+            "category": "Bow Creek"
+        }
+    ]
+}

@@ -1,0 +1,322 @@
+$theme1: rgb(14, 49, 66);
+
+$theme2: rgb(59, 95, 119);
+
+$theme3: rgb(44, 140, 182);
+
+$borderRadius: 0.75rem;
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    user-select: none;
+    color: $theme1;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+::-webkit-scrollbar {
+    height: 0;
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: none;
+}
+
+a {
+    color: $theme2;
+    &:visited,
+    &:focus {
+        color: $theme3;
+    }
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app {
+    text-align: center;
+}
+
+.app-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .app-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 7;
+
+    .backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(#000, 0.5);
+        z-index: 8;
+    }
+    .dialog {
+        z-index: 9;
+        position: absolute;
+        top: 2em;
+        right: 2em;
+        left: 2em;
+        background: #fff;
+        border-radius: $borderRadius;
+        min-height: 40%;
+
+        .title {
+            display: flex;
+            border-bottom: 1px #ccc solid;
+            h2 {
+                flex: 1;
+                width: auto;
+                margin: 0;
+                padding: 1rem;
+            }
+
+            $size: 60px;
+
+            button {
+                background: none;
+                border: none;
+                margin: 0;
+                padding: 0;
+                width: $size;
+                border-top-right-radius: $borderRadius;
+                &:hover,
+                &:active {
+                    background-color: lighten($theme2, 50%);
+                }
+                svg {
+                    margin-right: 1rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
+        .body {
+            padding: 0.75em;
+            overflow-wrap: break-word;
+
+            p {
+                margin: 0 0 1em;
+            }
+        }
+    }
+}
+
+.app-header {
+    position: relative;
+    padding: 0.5em 0.5em 0;
+    border-bottom: #999 solid 1px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0.25em 0.25em rgba(black, 0.1);
+    z-index: 4;
+    nav {
+        max-width: 100%;
+        overflow-x: scroll;
+        overflow-y: none;
+        margin: 0 0 0.5em;
+        padding: 0;
+        display: block;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            li {
+                padding: 0;
+                display: block;
+                flex: 0 0 auto;
+                margin: 0 0.25em;
+                &:nth-child(1) {
+                    margin-left: 0;
+                }
+                button {
+                    background: transparent;
+                    border-radius: $borderRadius;
+                    border: solid #ccc 1px;
+                    min-width: 120px;
+                    text-align: center;
+                    &.selected {
+                        background-color: $theme2;
+                        color: #fff;
+                        border-color: $theme1;
+                    }
+                    .day-week {
+                        font-size: 1.3em;
+                    }
+                    .day-month {
+                        font-size: 1.9em;
+                    }
+                    .month {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+        &.days ul li button {
+            height: 90px;
+            padding: 0.7em 0 1em;
+        }
+        &.categories ul li button {
+            height: auto;
+            padding: 0.5rem 1rem;
+            font-size: 16px;
+            min-width: auto;
+            font-weight: 500;
+        }
+    }
+}
+
+.app-link {
+    color: #61dafb;
+}
+
+#loader {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $theme3;
+    fill: $theme3;
+
+    svg {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        path {
+            fill: $theme3;
+        }
+    }
+}
+
+.times-events {
+    overflow-x: auto;
+    font-size: 30px;
+    line-height: 1.2;
+    flex: 1;
+    padding: 0.25em 0 0 0;
+    margin-bottom: 0.5em;
+    .scroll-window {
+        position: relative;
+        .time-event,
+        .now {
+            z-index: 1;
+            display: flex;
+            position: absolute;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 15px 0 10px;
+            .time {
+                box-sizing: border-box;
+                display: block;
+                width: 70px;
+                margin-right: 15px;
+                text-align: right;
+                color: lighten($theme2, 25%);
+                font-weight: bold;
+                font-size: 16px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .start.share {
+                    margin-top: -0.5em;
+                }
+            }
+            .event {
+                box-sizing: border-box;
+                font-size: 16px;
+                display: block;
+                flex: 1;
+                line-height: 1.2;
+                background-color: lighten($theme2, 50%);
+                box-shadow: inset 0 0 0 1px rgba(lighten($theme2, 30%), 0.5);
+                border-radius: $borderRadius;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $theme1;
+                > div {
+                    font-size: 16px;
+                    margin-top: -0.25em;
+                }
+            }
+
+            &:nth-child(2n) {
+                .event {
+                    background-color: lighten($theme2, 55%);
+                }
+            }
+        }
+
+        .now {
+            box-sizing: border-box;
+            position: absolute;
+            width: 100%;
+            height: 1em;
+            border-top: dashed 2px rgba(255, 0, 0, 0.2);
+            z-index: 2;
+            overflow: visible;
+            .time {
+                box-sizing: initial;
+                margin-top: -1.75em;
+                margin-left: -0.25em;
+                padding: 1em 5px 2em;
+                color: rgba(255, 0, 0, 0.5);
+                height: auto;
+                background-color: #999; // opacify(#ccc, 0.8);
+                background: linear-gradient(
+                    0,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 1) 10%,
+                    rgba(255, 255, 255, 1) 90%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+            }
+        }
+    }
+}
+
+.app-footer {
+    display: none;
+    height: 2em;
+    width: 100%;
+    background-color: rgba(white, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
